@@ -42,7 +42,7 @@ const PopupBeer = () => {
           ))}
         </ul>
         <Link to="/">
-          <button className="button button--outline">Назад</button>
+          <button className="button button--outline">Back</button>
         </Link>
       </div>
     </div>
