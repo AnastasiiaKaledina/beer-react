@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.beerBlock {
+  width: 260px;
+  text-align: left;
+
+  .title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 30px 0 10px;
+  }
+
+  .tagline {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+
+  .description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 20px 0;
+  }
+}

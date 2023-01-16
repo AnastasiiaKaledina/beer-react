@@ -1,0 +1,1 @@
+export const beerSelector = (state) => state.beer;

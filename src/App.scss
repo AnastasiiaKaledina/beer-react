@@ -1,0 +1,13 @@
+@import './scss/variables';
+@import './scss/libs/normalize';
+@import './scss/components/all';
+
+body {
+  background-color: $background;
+}
+
+.wrapper {
+  width: 1160px;
+  height: 100%;
+  margin: 50px auto;
+}

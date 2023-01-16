@@ -1,0 +1,39 @@
+@import './../variables';
+
+.button {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: $brown;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+  border: 2px solid transparent;
+  @include noselect();
+
+  &:hover {
+    background-color: darken($brown, 8%);
+  }
+
+  &:active {
+    background-color: darken($brown, 12%);
+    transform: translateY(1px);
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-color: $brown;
+
+    &:hover {
+      background-color: $brown;
+      color: white;
+    }
+
+    &:active {
+      background-color: darken($brown, 8%);
+    }
+  }
+}
