@@ -14,7 +14,7 @@ const PopupBeer = () => {
         const { data } = await axios.get(`https://api.punkapi.com/v2/beers/${params.id}`);
         setBeerInfo(...data);
       } catch (error) {
-        alert('Ошибка при получении пива');
+        alert('Error when getting beer');
         navigate('/');
       }
     }
@@ -22,7 +22,7 @@ const PopupBeer = () => {
     getBeerInfo();
   }, []);
 
-  if (!beerInfo) return <>Загрузка...</>;
+  if (!beerInfo) return <>Loading...</>;
 
   return (
     <div className={styles.wrapper}>
