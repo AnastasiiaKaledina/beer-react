@@ -16,7 +16,7 @@ const BeerItem = ({ image_url, name, tagline, description, id }) => {
         </div>
       </Link>
       <Link to={`beers/${id}`}>
-        <button className="button button--outline">Подробнее</button>
+        <button className="button button--outline">More</button>
       </Link>
     </div>
   );

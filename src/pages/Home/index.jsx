@@ -47,20 +47,20 @@ const Home = () => {
   return (
     <>
       <Search />
-      <h1 className={styles.title}>Пиво</h1>
+      <h1 className={styles.title}>Beer</h1>
       {status === 'error' ? (
         <div className={styles.errorInfo}>
           <h3>
-            Произошла ошибка<span>😕</span>
+            An error has occurred<span>😕</span>
           </h3>
-          <p>К сожалению, не удалось получить карточки. Попробуйте повторить попытку позже.</p>
+          <p>Unfortunately, the cards could not be received. Please try again later.</p>
         </div>
       ) : (
         <div className={styles.items}>
           {status === 'loading' ? (
             [...new Array(8)].map((_, index) => <MyLoader key={index} />)
           ) : beersData.length === 0 ? (
-            <div>Товаров не найдено</div>
+            <div>No products found</div>
           ) : (
             beersData.map((beer) => <CardBeer {...beer} key={beer.name} />)
           )}
