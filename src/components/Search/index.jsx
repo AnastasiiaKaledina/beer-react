@@ -9,7 +9,7 @@ import { filterSelector } from '../../redux/slices/filter/selectors';
 
 const Search = () => {
   const inputRef = React.useRef(null);
-  const [localValue, setLocalValue] = React.useState(''); 
+  const [localValue, setLocalValue] = React.useState('');
   const { searchString } = useSelector(filterSelector);
   const dispatch = useDispatch();
 
@@ -41,7 +41,7 @@ const Search = () => {
       <input
         ref={inputRef}
         className={styles.input}
-        placeholder="Поиск пива..."
+        placeholder="Search beer..."
         onChange={onChangeInput}
         value={localValue}
       />
