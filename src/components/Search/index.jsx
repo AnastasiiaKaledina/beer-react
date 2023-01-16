@@ -3,7 +3,7 @@ import styles from './Search.module.scss';
 import { ReactComponent as SearchIcon } from '../../assets/img/search.svg';
 import close from '../../assets/img/close.svg';
 import debounce from 'lodash.debounce';
-import { setSearchString } from '../../redux/slices/filter/filterSlice';
+import { setPageNumber, setSearchString } from '../../redux/slices/filter/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterSelector } from '../../redux/slices/filter/selectors';
 
@@ -33,6 +33,7 @@ const Search = () => {
   const onChangeInput = (e) => {
     setLocalValue(e.target.value);
     inputDebounce(e.target.value);
+    dispatch(setPageNumber(1));
   };
 
   return (
